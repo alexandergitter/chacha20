@@ -20,5 +20,6 @@ task :benchmark do
 
   Benchmark.bm do |bm|
     bm.report("Salsa20Specification") { ChaCha20::Cipher.new(key, nonce, cipher: :salsa20_spec).keystream(bytesize) }
+    bm.report("Salsa20Core") { ChaCha20::Cipher.new(key, nonce, cipher: :salsa20_core).keystream(bytesize) }
   end
 end
