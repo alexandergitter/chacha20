@@ -1,11 +1,13 @@
 module ChaCha20
   class Cipher
-    def initialize(key, nonce, cipher: :salsa20_core)
+    def initialize(key, nonce, cipher: :chacha20)
       @cipher = case cipher
                 when :salsa20_spec
                   Salsa20Specification.new(key, nonce)
                 when :salsa20_core
                   Salsa20Core.new(key, nonce)
+                when :chacha20
+                  ChaCha20.new(key, nonce)
                 else
                   raise ArgumentError, "unknown cipher: #{cipher}"
                 end

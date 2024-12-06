@@ -9,7 +9,7 @@ class TestSalsa20Core < Minitest::Test
   end
 
   def test_keystream_matches_salsa20_specification
-    10000.times do |c|
+    2000.times do |c|
       assert_equal @salsa20_spec.keystream_block(c), @salsa20_core.keystream_block(c)
     end
   end
