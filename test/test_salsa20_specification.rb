@@ -1,9 +1,7 @@
 require "test_helper"
 
 class TestSalsa20Specification < Minitest::Test
-  def read_hex(inp)
-    [inp.gsub(/\s+/, "")].pack("H*")
-  end
+  include TestHelper
 
   def setup
     @salsa20 = ::ChaCha20::Salsa20Specification.new(read_hex("0000000000000000000000000000000000000000000000000000000000000000"), read_hex("0000000000000000"))
