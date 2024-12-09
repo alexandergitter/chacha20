@@ -1,4 +1,4 @@
-module ChaCha20
+module Salcha
   class Cipher
     def initialize(key, nonce, cipher: :chacha20)
       @cipher = case cipher

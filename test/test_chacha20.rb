@@ -51,7 +51,7 @@ class TestChaCha20 < Minitest::Test
       counter = vector[:counter]
       keystream = read_hex(vector[:keystream])
 
-      assert_equal keystream, ChaCha20::ChaCha20.new(key, nonce).keystream_block(counter).get_string
+      assert_equal keystream, Salcha::ChaCha20.new(key, nonce).keystream_block(counter).get_string
     end
   end
 end

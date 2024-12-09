@@ -1,5 +1,0 @@
-require_relative "chacha20/version"
-require_relative "chacha20/salsa20_specification"
-require_relative "chacha20/salsa20_core"
-require_relative "chacha20/chacha20"
-require_relative "chacha20/cipher"

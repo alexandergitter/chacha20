@@ -1,6 +1,6 @@
 require "bundler/gem_tasks"
 require "minitest/test_task"
-require_relative "lib/ruby-chacha20"
+require_relative "lib/ruby-salcha"
 
 Minitest::TestTask.create
 
@@ -19,8 +19,8 @@ task :benchmark do
   puts "Benchmark to generate 10 MB keystream"
 
   Benchmark.bm do |bm|
-    bm.report("Salsa20Specification") { ChaCha20::Cipher.new(key, nonce, cipher: :salsa20_spec).keystream(bytesize) }
-    bm.report("Salsa20Core") { ChaCha20::Cipher.new(key, nonce, cipher: :salsa20_core).keystream(bytesize) }
-    bm.report("ChaCha20") { ChaCha20::Cipher.new(key, nonce, cipher: :chacha20).keystream(bytesize) }
+    bm.report("Salsa20Specification") { Salcha::Cipher.new(key, nonce, cipher: :salsa20_spec).keystream(bytesize) }
+    bm.report("Salsa20Core") { Salcha::Cipher.new(key, nonce, cipher: :salsa20_core).keystream(bytesize) }
+    bm.report("ChaCha20") { Salcha::Cipher.new(key, nonce, cipher: :chacha20).keystream(bytesize) }
   end
 end

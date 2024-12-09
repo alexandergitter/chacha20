@@ -4,7 +4,7 @@ class TestSalsa20Specification < Minitest::Test
   include TestHelper
 
   def setup
-    @salsa20 = ::ChaCha20::Salsa20Specification.new(read_hex("0000000000000000000000000000000000000000000000000000000000000000"), read_hex("0000000000000000"))
+    @salsa20 = Salcha::Salsa20Specification.new(read_hex("0000000000000000000000000000000000000000000000000000000000000000"), read_hex("0000000000000000"))
   end
 
   def test_leftrotate32

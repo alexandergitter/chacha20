@@ -1,13 +1,13 @@
-require_relative "lib/chacha20/version"
+require_relative "lib/salcha/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "ruby-chacha20"
-  spec.version = ChaCha20::VERSION
+  spec.name = "ruby-salcha"
+  spec.version = Salcha::VERSION
   spec.authors = ["Alexander Gitter"]
   spec.email = ["contact@agitter.de"]
 
   spec.summary = "Salsa20 and ChaCha20 stream cipher algorithms in pure Ruby."
-  spec.homepage = "https://github.com/alexandergitter/chacha20"
+  spec.homepage = "https://github.com/alexandergitter/ruby-salcha"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 

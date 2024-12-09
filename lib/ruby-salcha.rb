@@ -1,0 +1,5 @@
+require_relative "salcha/version"
+require_relative "salcha/salsa20_specification"
+require_relative "salcha/salsa20_core"
+require_relative "salcha/chacha20"
+require_relative "salcha/cipher"

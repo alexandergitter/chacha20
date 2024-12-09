@@ -1,4 +1,4 @@
-module ChaCha20
+module Salcha
   class ChaCha20
     def initialize(key, nonce)
       raise ArgumentError, "key must be 32 bytes" unless key.bytesize == 32

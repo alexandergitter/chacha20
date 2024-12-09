@@ -1,4 +1,4 @@
-# ChaCha20
+# Salcha
 
 A pure Ruby implementation of the Salsa20 and ChaCha20 stream ciphers. Supports arbitrary seeking inside the keystream.
 
@@ -13,13 +13,13 @@ For the time being, this is not on rubygems.org. Point your Gemfile to this repo
 Initialize a new cipher with a 32-byte key and an 8-byte nonce (both bytestrings of class `String`):
 
 ```ruby
-cipher = ChaCha20::Cipher.new(key, nonce)
+cipher = Salcha::Cipher.new(key, nonce)
 ```
 
 To specify a different algorithm, pass the optional `cipher` keyword argument:
 
 ```ruby
-cipher = ChaCha20::Cipher.new(key, nonce, cipher: :salsa20_specification)
+cipher = Salcha::Cipher.new(key, nonce, cipher: :salsa20_specification)
 ```
 
 Options are `:chacha20` (default), `:salsa20_core` (uses the Salsa20 core function) and `:salsa20_specification`
